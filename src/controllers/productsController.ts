@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import MLProducts from '../services/findMLProducts';
+import MLProducts from '../services/MLProducts';
 
 const URL = 'https://api.mercadolibre.com/sites/MLB/search?q=computador';
 
