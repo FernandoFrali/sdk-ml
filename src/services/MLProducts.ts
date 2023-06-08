@@ -3,8 +3,8 @@ import IProduct from '../interfaces/Product';
 import mapProducts from '../DTO/dtoProducts';
 
 type ProductUpdateData = Pick<IProduct, 'status' | 'price' | 'title'>;
-const token = process.env.ACCESS_TOKEN;
 
+const token = process.env.ACCESS_TOKEN;
 const axiosConfig = {
   headers: {
     Authorization: `Bearer ${token}`,
@@ -34,9 +34,8 @@ class MLProducts {
       const { result } = response.data;
 
       return result;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-      throw new Error(error.message);
+    } catch (error) {
+      throw new Error(error as string);
     }
   }
 }

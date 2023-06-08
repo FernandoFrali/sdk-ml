@@ -17,7 +17,6 @@ class MLProductsController {
 
   static async editProduct(req: Request, res: Response) {
     try {
-      console.log(req.params);
       const { id } = req.params;
       const { body } = req;
 
