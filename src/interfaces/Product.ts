@@ -3,6 +3,7 @@ import ISeller from './Seller';
 interface IProduct {
   id: string,
   title: string,
+  status?: string,
   condition: string,
   permalink: string,
   site_id: string,
